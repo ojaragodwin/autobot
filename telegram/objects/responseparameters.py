@@ -1,4 +1,4 @@
 from .base import BaseObject
 
-class Contact(BaseObject):
+class ResponseParameters(BaseObject):
     pass 

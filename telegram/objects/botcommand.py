@@ -1,25 +1,39 @@
-class BotCommand:
+from .base import BaseObject
+
+class BotCommand(BaseObject):
+    
+    __slots__ = (
+        "command",
+        "description",
+    )
+    
+    def __init__ (self,command,description):
+        self.command = command
+        self.description = description
+
+class BotCommandScope(BaseObject):
+   
+    __slots__ = ("type")
+    def __init__ (self,type):
+        self.type = type
+
+class BotCommandScopeAllChatAdministrators(BaseObject):
+    pass 
+
+class BotCommandScopeAllGroupChats(BaseObject):
+    pass 
+
+class BotCommandScopeAllPrivateChats(BaseObject):
     pass
-
-class BotCommandScope:
+    
+class BotCommandScopeChat(BaseObject):
     pass 
 
-class BotCommandScopeAllChatAdministrators:
+class BotCommandScopeChatAdministrators(BaseObject):
     pass 
 
-class BotCommandScopeAllGroupChats:
+class BotCommandScopeChatMember(BaseObject):
     pass 
 
-class BotCommandScopeAllPrivateChats:
-    pass
-class BotCommandScopeChat:
-    pass 
-
-class BotCommandScopeChatAdministrators:
-    pass 
-
-class BotCommandScopeChatMember:
-    pass 
-
-class BotCommandScopeDefault:
+class BotCommandScopeDefault(BaseObject):
     pass 
